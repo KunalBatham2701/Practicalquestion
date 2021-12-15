@@ -17,7 +17,7 @@ public class Test {
     public static void insert(ArrayList<student> arr1,Connection con1) throws SQLException {
         PreparedStatement s = null;
         Pattern p=Pattern.compile("j$");
-        for (int k = 0; k < 3; k++) {
+        for (int k = 0; k < 10; k++) {
             Matcher m=p.matcher(arr1.get(k).name);
             try {
                 if (m.find()) {
@@ -52,7 +52,7 @@ public class Test {
             ArrayList<student> arr = new ArrayList<>();
             Scanner sc = new Scanner(System.in);
             student[] stu = new student[10];
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 10; i++) {
                 System.out.print("enter rollno : ");
                 int a = sc.nextInt();
                 sc.nextLine();
@@ -62,7 +62,7 @@ public class Test {
                 int c = sc.nextInt();
                 stu[i] = new student(a, b, c);
             }
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < 10; j++)
                 arr.add(j, stu[j]);
             Test.insert(arr,con);
             Test.show(con);
