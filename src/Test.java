@@ -1,7 +1,6 @@
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-//import java.util.concurrent.locks.StampedLock;
 import java.util.regex.*;
 
 class student{
